@@ -30,32 +30,29 @@ const eqArrays = function (arr1, arr2) {
 
 
 
-const without = function (arr, itemToRemove) {
-
+const without = function (arr, itemsToRemove) {
+  let newArray = [];
+  let match = false;
   for (let i = 0; i < arr.length; i++) {
-
-
-    console.log(`Elements Of array${arr[i]} ${itemToRemove}`);
-
-
-    if (arr[i] === itemToRemove) {
-
-
-      arr.splice(i, 1);
-
-
+    // console.log(`Elements Of array${arr[i]} ${itemToRemove}`);
+    for (let item of itemsToRemove) {
+      if (arr[i] !== item) {
+        newArray.push(arr[i]);
+        //  console.log(newArray);
+      } else {
+        match = true;
+      }
     }
 
   }
-  console.log(arr);
-  return arr;
+  return newArray;
 
 }
 
 
-without([1, 2, 3], 1);
+console.log(without([1, 2, 3], [1]));
 
-without(["1", "2", "3"], "3")
+without(["1", "2", "3"], [1, 2, "3"])
 const words = ["hello", "world", "lighthouse"];
-without(words, "lighthouse");
+without(words, ["lighthouse"]);
 
