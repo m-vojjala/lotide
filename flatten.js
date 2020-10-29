@@ -1,4 +1,4 @@
-const assertEqualArrays = function (arr1, arr2) {
+const assertEqualArrays = function(arr1, arr2) {
   let isEqual = true;
   if (arr1.length === arr2.length) {
     for (let i = 0; i < arr1.length; i++) {
@@ -9,10 +9,10 @@ const assertEqualArrays = function (arr1, arr2) {
     }
   }
   return console.log("Arrays are equal: " + isEqual);
-}
+};
 
 
-const eqArrays = function (arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
   let isEqual = true;
   if (arr1.length === arr2.length) {
     for (let i = 0; i < arr1.length; i++) {
@@ -23,10 +23,10 @@ const eqArrays = function (arr1, arr2) {
     }
   }
   return isEqual;
-}
+};
 
 
-const flatten = function (arr) {
+const flatten = function(arr) {
   let finalArray = [];
   for (let i = 0; i < arr.length; i++) {
 
@@ -34,8 +34,7 @@ const flatten = function (arr) {
 
     if (!Array.isArray(arr[i])) {
       finalArray.push(arr[i]);
-    }
-    else {
+    } else {
       //  console.log('Looks like ' + arr[i] + ' is an array.');
       let temp = arr[i];
       for (let j = 0; j < temp.length; j++) {
@@ -46,7 +45,7 @@ const flatten = function (arr) {
     // console.log('Final array: ' + finalArray);
   }
   return finalArray;
-}
+};
 
 
-console.log(flatten([1, 2, [3, 4], 5, [6]]))
+console.log(flatten([1, 2, [3, 4], 5, [6]]));

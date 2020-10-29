@@ -9,19 +9,19 @@ const assertEqual = function(actual, expected) {
 
 
 
-const countOnly = function(allItems,itemsToCount){
-const results = {};
-for(let item of allItems){
- if(itemsToCount[item]){
-   if(results[item]){
-     results[item]++;
-   }else{
-     results[item] =1;
-   }
- }
-}
- return results;
-}
+const countOnly = function(allItems,itemsToCount) {
+  const results = {};
+  for (let item of allItems) {
+    if (itemsToCount[item]) {
+      if (results[item]) {
+        results[item]++;
+      } else {
+        results[item] = 1;
+      }
+    }
+  }
+  return results;
+};
 
 const firstNames = [
   "Karl",

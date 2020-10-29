@@ -1,5 +1,5 @@
 
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅Assertion Passed: ${actual}  ==== ${expected}`);
   } else {
@@ -8,7 +8,7 @@ const assertEqual = function (actual, expected) {
 
 };
 
-const eqArrays = function (arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
   let isEqual = true;
   if (arr1.length === arr2.length) {
     for (let i = 0; i < arr1.length; i++) {
@@ -19,11 +19,11 @@ const eqArrays = function (arr1, arr2) {
     }
   }
   return isEqual;
-}
+};
 
 
 
-const assertEqualArrays = function (arr1, arr2) {
+const assertEqualArrays = function(arr1, arr2) {
   let isEqual = true;
   if (arr1.length === arr2.length) {
     for (let i = 0; i < arr1.length; i++) {
@@ -34,10 +34,10 @@ const assertEqualArrays = function (arr1, arr2) {
     }
   }
   return console.log("Arrays are equal: " + isEqual);
-}
+};
 
 
-const middle = function (arr) {
+const middle = function(arr) {
   let middleEl = Math.floor(arr.length / 2);
   let newArr = [];
 
@@ -55,6 +55,6 @@ const middle = function (arr) {
   }
 
   return newArr;
-}
+};
 
 

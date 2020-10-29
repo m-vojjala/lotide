@@ -1,4 +1,4 @@
-const assertEqualArrays = function (arr1, arr2) {
+const assertEqualArrays = function(arr1, arr2) {
   let isEqual = true;
   if (arr1.length === arr2.length) {
     for (let i = 0; i < arr1.length; i++) {
@@ -9,10 +9,10 @@ const assertEqualArrays = function (arr1, arr2) {
     }
   }
   return console.log("Arrays are equal: " + isEqual);
-}
+};
 
 
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅Assertion Passed: ${actual}  ==== ${expected}`);
   } else {
@@ -21,7 +21,7 @@ const assertEqual = function (actual, expected) {
 
 };
 
-const eqArrays = function (arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
   let isEqual = true;
   if (arr1.length === arr2.length) {
     for (let i = 0; i < arr1.length; i++) {
@@ -32,7 +32,7 @@ const eqArrays = function (arr1, arr2) {
     }
   }
   return isEqual;
-}
+};
 
 
 
@@ -42,7 +42,7 @@ const eqArrays = function (arr1, arr2) {
 
 
 
-const letterPositions = function (sentence) {
+const letterPositions = function(sentence) {
   const results = {};
 
   let indexArray = [];
@@ -52,11 +52,11 @@ const letterPositions = function (sentence) {
 
   for (let i = 0; i < arr.length; i++) {
 
-    // console.log(arr[i]) 
+    // console.log(arr[i])
     console.log('--------------------------');
     console.log('Iteration: ' + i);
 
-    let letter = arr[i]
+    let letter = arr[i];
 
     if (!results[letter]) {
       indexArray.push(i);
@@ -81,7 +81,7 @@ const letterPositions = function (sentence) {
 
   return results;
 
-}
+};
 console.log(letterPositions("hello"));
 
 assertEqualArrays(letterPositions("hello").e, [1]);
