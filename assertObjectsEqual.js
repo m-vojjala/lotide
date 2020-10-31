@@ -1,21 +1,21 @@
-const eqObjects = function(obj1, obj2) {
+const eqObjects = function(obj1,obj2) {
   let keysArray1 = Object.keys(obj1);
   let keysArray2 = Object.keys(obj2);
 
+  //  console.log(keysArray1);
   if (keysArray1.length === keysArray2.length) {
-    for (let key in obj1) {
-      if (Array.isArray(obj1[key])) {
-        eqArrays(obj1[key], obj2[key]);
-      } else {
-        if (obj1[key] === obj2[key]) {
-          return true;
-        }
+    for (let key of keysArray1) {
+      if (obj1[key] instanceof Object || obj2[key] instanceof Object)  {
+        return eqObjects(obj1[key],obj2[key]);
+      } else
+      if (obj1[key] === obj2[key]) {
+        return true;
       }
+      return false;
     }
   }
-
   return false;
-};
+}
 
 
 const assertObjectsEqual = function(actual, expected) {
@@ -31,7 +31,9 @@ const assertObjectsEqual = function(actual, expected) {
 const ab = { a: 1, b: 2 };
 const ba = { b: 2, a: 1 };
 
-assertObjectsEqual(ab, ba);
+assertObjectsEqual({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 },{ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 });
+
+
 
 
 
