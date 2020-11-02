@@ -16,7 +16,7 @@ const eqObjects = function(obj1,obj2) {
   //  console.log(keysArray1);
   if (keysArray1.length === keysArray2.length) {
     for (let key of keysArray1) {
-      if (obj1[key] instanceof Object || obj2[key] instanceof Object)  {
+      if (obj1[key] instanceof Object && obj2[key] instanceof Object)  {
         return eqObjects(obj1[key],obj2[key]);
       } else
       if (obj1[key] === obj2[key]) {
@@ -31,9 +31,10 @@ const eqObjects = function(obj1,obj2) {
 
 
 
-console.log(assertObjectsEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }))); // => true
+console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => true
 
 console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }));
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })) // => false)
 
 // const ab = { a: "1", b: "2" };
 // const ba = { b: "2", a: "1" };
