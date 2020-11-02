@@ -1,40 +1,5 @@
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual}  ==== ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed: ${actual}  !==  ${expected}`);
-  }
 
-};
-
-const eqArrays = function(arr1, arr2) {
-  let isEqual = true;
-  if (arr1.length === arr2.length) {
-    for (let i = 0; i < arr1.length; i++) {
-
-      if (arr1[i] !== arr2[i]) {
-        return console.log(!isEqual);
-      }
-    }
-  }
-  return isEqual;
-};
-
-
-
-const assertEqualArrays = function(arr1, arr2) {
-  let isEqual = true;
-  if (arr1.length === arr2.length) {
-    for (let i = 0; i < arr1.length; i++) {
-
-      if (arr1[i] !== arr2[i]) {
-        return console.log("Arrays are equal: " + !isEqual);
-      }
-    }
-  }
-  return console.log("Arrays are equal: " + isEqual);
-};
 
 
 const middle = function(arr) {
@@ -56,5 +21,7 @@ const middle = function(arr) {
 
   return newArr;
 };
+
+module.exports =  middle;
 
 
